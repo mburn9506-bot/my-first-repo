@@ -1,0 +1,76 @@
+https://youtu.be/Ubg3PenEdNw?list=PLEiEAq2VkUUIPrwE2ZFe-07d28SPCxj5x&t=1846
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    int[] arr = {12, 11, 13, 5, 6};
+        int n = arr.length;
+        insertionsort(arr, n);
+        for (int i = 0; i < n; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+	}
+	static void insertionsort(int arr[], int n){
+	    int i,key,j;
+	    for(i=1;i<n;i++){
+	        key = arr[i];
+	        j = i-1;
+	        while(j>=0 && arr[j]>key){
+	            arr[j+1]=arr[j];
+	            j=j-1;
+	            }
+	            arr[j+1]=key;
+	    }
+	}
+
+}
+https://youtu.be/Ubg3PenEdNw?t=2150
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int a =5, *ptr;
+	ptr = &a;
+	cout << "a = " << a<<endl;
+	cout << "a = " << *ptr<<endl;
+
+}
+
+====== type of pointer ======
+Null - void -- wild - dangling
+void syntax : void *var;
+
+int main() {
+	int *ptr = (int *)malloc(sizeof(int));
+        int a=5;
+        ptr = &a;
+        free(ptr);
+        cout<<*ptr;
+         return 0;
+	}
+https://youtu.be/Ubg3PenEdNw?t=2811
+ ======== use cases of pointer ====
+ pointer arithmetic - pointer to pointer - array of pointers - call by value - call by reference
+  we can do different types of arithmetic operations on pointers
+  increment (++) - decrement (--) integers can be added to pointers (+ or +=)integers can be subtracted from pointers (- or -=)
+  note : pointer arithmetic is of no use if not used arrays
+
+  https://youtu.be/Ubg3PenEdNw?t=2838
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int arr[3]={2,3,5};
+  int *tr;
+  tr = &arr[0];
+  for(int i = 0; i<3; i++){
+       cout<<*tr<<endl; 
+      tr++;  
+  }
+	}
+        https://youtu.be/Ubg3PenEdNw?t=2984
