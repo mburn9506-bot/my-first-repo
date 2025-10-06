@@ -1,0 +1,90 @@
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+mss-MacBook:algorithme 1138 michelkadi$ rm -rf .git
+mss-MacBook:algorithme 1138 michelkadi$ git init
+Initialized empty Git repository in /Users/michelkadi/algorithme 1138/.git/
+mss-MacBook:algorithme 1138 michelkadi$ git add algorithme.txt
+mss-MacBook:algorithme 1138 michelkadi$ git status
+On branch mike
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   algorithme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+mss-MacBook:algorithme 1138 michelkadi$ git commit -m "josephine
+> git commit -m "josephine"
+> 
+mss-MacBook:algorithme 1138 michelkadi$ git commit -m "josephine
+git commit -m "josephine"
+mss-MacBook:algorithme 1138 michelkadi$ git commit -m "josephine"
+[mike (root-commit) d119669] josephine
+ 1 file changed, 76 insertions(+)
+ create mode 100644 algorithme.txt
+mss-MacBook:algorithme 1138 michelkadi$  git remote add origin https://github.com/mburn9506-bot/my-first-repo.git
+mss-MacBook:algorithme 1138 michelkadi$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/mburn9506-bot/my-first-repo.git'
+mss-MacBook:algorithme 1138 michelkadi$ git branch
+* mike
+mss-MacBook:algorithme 1138 michelkadi$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+mss-MacBook:algorithme 1138 michelkadi$     git checkout -b main
+Switched to a new branch 'main'
+mss-MacBook:algorithme 1138 michelkadi$ git branch
+* main
+  mike
+mss-MacBook:algorithme 1138 michelkadi$ git push origin main
+To https://github.com/mburn9506-bot/my-first-repo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/mburn9506-bot/my-first-repo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+mss-MacBook:algorithme 1138 michelkadi$ git pull origin main
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 12 (delta 4), reused 10 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (12/12), 1.86 KiB | 37.00 KiB/s, done.
+From https://github.com/mburn9506-bot/my-first-repo
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: refusing to merge unrelated histories
+mss-MacBook:algorithme 1138 michelkadi$ git pull --rebase origin main
+From https://github.com/mburn9506-bot/my-first-repo
+ * branch            main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+mss-MacBook:algorithme 1138 michelkadi$ git push origin main --force
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.14 KiB | 1.14 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+
+To https://github.com/mburn9506-bot/my-first-repo.git
+   90cc72d..f58e1d1  main -> main
+mss-MacBook:algorithme 1138 michelkadi$ 
+mss-MacBook:algorithme 1138 michelkadi$ 
