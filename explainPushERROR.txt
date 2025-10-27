@@ -1,0 +1,34 @@
+! [rejected]        mike -> mike (fetch first)
+error: failed to push some refs to 'https://github.com/mburn9506-bot/my-first-repo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+answer:
+git fetch origin
+git log HEAD..origin/mike --oneline
+(This shows which commits exist remotely but not in your local branch.)
+===============================================
+
+option1:
+git pull origin mike --rebase
+then push:
+git push origin mike
+git pull --rebase pulls new commits from the remote and replays your local commits on top.
+
+Then you can push normally once everything is in sync.
+===================================
+option2:If you want to overwrite remote changes
+
+This will overwrite the remote branch with your local one — any commits on GitHub that you don’t have locally will be deleted from that branch.
+Quick check before pushing
+
+You can see what’s different using:
+Quick check before pushing
+git fetch origin
+git log HEAD..origin/mike --oneline
+This shows which commits exist remotely but not in your local branch.
+=====================================
+
